@@ -25,7 +25,7 @@ function Register() {
 
     try {
       const res = await axios.post(
-        "https://jkbcompany.onrender.com",
+        "https://jkbcompany.onrender.com/register",
         user
       );
 
