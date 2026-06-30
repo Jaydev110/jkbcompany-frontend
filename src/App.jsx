@@ -9,7 +9,7 @@ import AboutUs from "./component/menubar/AboutUs";
 import Services from "./component/menubar/Services";
 import Contact from "./component/menubar/ContactUs";
 
-import Login from "./component/menubar/Login";
+import Login from "./component/menubar/login";
 import Register from "./component/menubar/Register";
 import ResetPassword from "./component/menubar/ResetPassword";
 import Dashboard from "./component/menubar/Dashboard";
