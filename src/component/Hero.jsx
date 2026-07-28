@@ -8,8 +8,8 @@ function Hero() {
         textAlign: "center",
       }}
     >
-      <h1 style={{ fontSize: "55px" }}>
-        Welcome to MAHI Company
+      <h1 style={{ fontSize: "55px", color:"white"}}>
+        Welcome to JKB Company
       </h1>
 
       <h3>
