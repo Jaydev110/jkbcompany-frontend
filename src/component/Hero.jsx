@@ -9,7 +9,7 @@ function Hero() {
       }}
     >
       <h1 style={{ fontSize: "55px" }}>
-        Welcome to JKB Company
+        Welcome to MAHI Company
       </h1>
 
       <h3>
