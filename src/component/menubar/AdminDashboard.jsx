@@ -38,7 +38,7 @@ function AdminDashboard() {
     const fetchEmployees = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/users",
+          "https://jkbcompany-1.onrender.com/users",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -76,7 +76,7 @@ function AdminDashboard() {
     const fetchTasks = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/admin/tasks",
+          "https://jkbcompany-1.onrender.com/admin/tasks",
           {
             headers: {
               Authorization: `Bearer ${token}`,

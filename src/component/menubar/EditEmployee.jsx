@@ -40,7 +40,7 @@ function EditEmployee() {
     const fetchEmployee = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/users/${id}`,
+          `https://jkbcompany-1.onrender.com/users/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -106,7 +106,7 @@ function EditEmployee() {
       console.log("Data:", employee);
 
       const res = await axios.put(
-        `http://localhost:5000/admin/employee/${id}`,
+        `https://jkbcompany-1.onrender.com/admin/employee/${id}`,
         employee,
         {
           headers: {

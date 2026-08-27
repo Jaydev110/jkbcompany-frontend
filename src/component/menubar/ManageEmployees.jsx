@@ -36,7 +36,7 @@ function ManageEmployees() {
       setError("");
 
       const res = await axios.get(
-        "http://localhost:5000/users",
+        "https://jkbcompany-1.onrender.com/users",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -99,7 +99,7 @@ function ManageEmployees() {
       setActionLoading(employeeId);
 
       await axios.put(
-        `http://localhost:5000/admin/employee/${employeeId}/${action}`,
+        `https://jkbcompany-1.onrender.com/admin/employee/${employeeId}/${action}`,
         {},
         {
           headers: {

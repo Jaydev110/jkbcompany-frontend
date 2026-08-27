@@ -37,7 +37,7 @@ function MyTasks() {
       setLoading(true);
 
       const res = await axios.get(
-        "http://localhost:5000/my-tasks",
+        "https://jkbcompany-1.onrender.com/my-tasks",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -85,7 +85,7 @@ function MyTasks() {
 
       const res = await axios.put(
 
-        `http://localhost:5000/my-tasks/${taskId}/status`,
+        `https://jkbcompany-1.onrender.com/my-tasks/${taskId}/status`,
 
         {
           status,

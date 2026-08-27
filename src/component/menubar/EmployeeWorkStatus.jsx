@@ -32,7 +32,7 @@ function EmployeeWorkStatus() {
     const fetchProfile = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/my-profile`,
+          `https://jkbcompany-1.onrender.com/my-profile`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

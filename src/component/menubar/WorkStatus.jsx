@@ -34,7 +34,7 @@ function WorkStatus() {
       setLoading(true);
 
       const res = await axios.get(
-        "http://localhost:5000/users",
+        "https://jkbcompany-1.onrender.com/users",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -82,7 +82,7 @@ function WorkStatus() {
       setUpdatingEmployee(employeeId);
 
       const res = await axios.put(
-        `http://localhost:5000/admin/employee/${employeeId}/work-status`,
+        `https://jkbcompany-1.onrender.com/admin/employee/${employeeId}/work-status`,
         {
           workstatus,
         },

@@ -43,7 +43,7 @@ function Dashboard() {
     const fetchTasks = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/my-tasks",
+          "https://jkbcompany-1.onrender.com/my-tasks",
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -33,7 +33,7 @@ function ViewEmployee() {
     const fetchEmployee = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/users/${id}`,
+          `https://jkbcompany-1.onrender.com/users/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

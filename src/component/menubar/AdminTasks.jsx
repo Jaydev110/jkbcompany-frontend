@@ -52,7 +52,7 @@ function AdminTasks() {
       setLoadingEmployees(true);
 
       const res = await axios.get(
-        "http://localhost:5000/users",
+        "https://jkbcompany-1.onrender.com/users",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -95,7 +95,7 @@ function AdminTasks() {
       setLoadingTasks(true);
 
       const res = await axios.get(
-        "http://localhost:5000/admin/tasks",
+        "https://jkbcompany-1.onrender.com/admin/tasks",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -152,7 +152,7 @@ function AdminTasks() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/admin/create-task",
+        "https://jkbcompany-1.onrender.com/admin/create-task",
         form,
         {
           headers: {

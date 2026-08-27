@@ -54,7 +54,7 @@ function AddEmployee() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/admin/create-employee",
+        "https://jkbcompany-1.onrender.com/admin/create-employee",
         employee,
         {
           headers: {
