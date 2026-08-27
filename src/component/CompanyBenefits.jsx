@@ -1,65 +1,116 @@
+import { Link } from "react-router-dom";
+import "./CompanyBenefits.css";
+
 function CompanyBenefits() {
-  const benefits = [
+  const features = [
     {
-      title: "Web Development",
-      description: "Modern, responsive and high-performance websites."
+      number: "01",
+      title: "Employee Management",
+      description:
+        "Manage employee profiles, contact details, work status and important information from one centralized platform.",
     },
     {
-      title: "Mobile Apps",
-      description: "Android and iOS applications for your business."
+      number: "02",
+      title: "Task Management",
+      description:
+        "Create, assign and monitor employee tasks to keep daily work organized and improve team productivity.",
     },
     {
-      title: "Software Solutions",
-      description: "Custom software tailored to your organization."
+      number: "03",
+      title: "Employee Records",
+      description:
+        "Store and organize employee information in a structured system for easy access and efficient administration.",
     },
     {
-      title: "24/7 Support",
-      description: "Reliable customer support whenever you need it."
-    }
+      number: "04",
+      title: "Workforce Monitoring",
+      description:
+        "Monitor employee work status and organizational activities through a simple and convenient dashboard.",
+    },
   ];
 
   return (
-    <div
-      style={{
-        padding: "60px 30px",
-        background: "#f5f7fa",
-      }}
-    >
-      <h2
-        style={{
-          textAlign: "center",
-          color: "#0b3d91",
-          marginBottom: "40px",
-        }}
-      >
-        Our Services
-      </h2>
+    <section className="services-preview-section">
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
-          gap: "25px",
-        }}
-      >
-        {benefits.map((item, index) => (
-          <div
-            key={index}
-            style={{
-              background: "white",
-              padding: "30px",
-              borderRadius: "12px",
-              boxShadow: "0 5px 15px rgba(0,0,0,.1)",
-              textAlign: "center",
-            }}
+      <div className="services-preview-container">
+
+        {/* =================================
+            SECTION HEADING
+        ================================= */}
+
+        <div className="services-preview-heading">
+
+          <span className="services-preview-label">
+            EMPLOYEE MANAGEMENT PORTAL
+          </span>
+
+          <h2>
+            Everything you need to
+            <span> manage your workforce</span>
+          </h2>
+
+          <p>
+            JKB Employee Management Portal helps organizations
+            manage employees, work status, tasks and essential
+            employee information through one simple and organized platform.
+          </p>
+
+        </div>
+
+
+        {/* =================================
+            FEATURE CARDS
+        ================================= */}
+
+        <div className="services-preview-grid">
+
+          {features.map((feature) => (
+            <div
+              className="services-preview-card"
+              key={feature.number}
+            >
+
+              <div className="services-preview-number">
+                {feature.number}
+              </div>
+
+              <h3>
+                {feature.title}
+              </h3>
+
+              <p>
+                {feature.description}
+              </p>
+
+              <div className="services-preview-arrow">
+                →
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
+
+        {/* =================================
+            BUTTON
+        ================================= */}
+
+        <div className="services-preview-button-wrapper">
+
+          <Link
+            to="/services"
+            className="services-preview-button"
           >
-            <h3>{item.title}</h3>
+            Explore Features
+            <span>→</span>
+          </Link>
 
-            <p>{item.description}</p>
-          </div>
-        ))}
+        </div>
+
       </div>
-    </div>
+
+    </section>
   );
 }
 

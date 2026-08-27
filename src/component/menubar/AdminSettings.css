@@ -1,0 +1,708 @@
+/* =========================================
+   JKB ADMIN SETTINGS
+========================================= */
+
+.admin-settings-page {
+  min-height: 100vh;
+
+  background: var(--jkb-bg);
+
+  color: var(--jkb-text);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-settings-header {
+  min-height: 70px;
+
+  padding:
+    0
+    35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #252525;
+
+  color: #ffffff;
+}
+
+.admin-settings-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.admin-settings-logo {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #f5c400;
+
+  color: #252525;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+.admin-settings-brand strong {
+  display: block;
+
+  font-size: 13px;
+}
+
+.admin-settings-brand span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #999999;
+
+  font-size: 8px;
+}
+
+
+/* =========================================
+   HEADER BUTTONS
+========================================= */
+
+.admin-settings-header-actions {
+  display: flex;
+
+  gap: 10px;
+}
+
+.admin-settings-header-actions button {
+  padding:
+    9px
+    14px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.admin-settings-header-actions button:first-child {
+  border:
+    1px
+    solid
+    #444444;
+
+  background: transparent;
+
+  color: #cccccc;
+}
+
+.admin-settings-header-actions button:last-child {
+  border: none;
+
+  background: #f5c400;
+
+  color: #252525;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.admin-settings-main {
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  padding:
+    40px
+    25px;
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.admin-settings-heading {
+  margin-bottom: 25px;
+}
+
+.admin-settings-heading > span {
+  color: var(--jkb-yellow-dark);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.admin-settings-heading h1 {
+  margin:
+    7px
+    0
+    5px;
+
+  color: var(--jkb-text);
+
+  font-size: 30px;
+}
+
+.admin-settings-heading p {
+  margin: 0;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   SETTINGS CARD
+========================================= */
+
+.settings-card {
+  margin-bottom: 18px;
+
+  padding: 25px;
+
+  border:
+    1px
+    solid
+    var(--jkb-border);
+
+  border-radius: 15px;
+
+  background: var(--jkb-card);
+
+  color: var(--jkb-text);
+
+  box-shadow:
+    0
+    8px
+    25px
+    rgba(
+      80,
+      70,
+      0,
+      0.05
+    );
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* =========================================
+   CARD HEADING
+========================================= */
+
+.settings-card-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.settings-card-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #fff2a1;
+
+  font-size: 14px;
+}
+
+.settings-card-heading span {
+  display: block;
+
+  color: var(--jkb-yellow-dark);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.settings-card-heading h2 {
+  margin:
+    4px
+    0
+    0;
+
+  color: var(--jkb-text);
+
+  font-size: 17px;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.settings-profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background: var(--jkb-soft);
+
+  border:
+    1px
+    solid
+    var(--jkb-border);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.settings-avatar {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #f5c400;
+
+  color: #252525;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.settings-profile > div:nth-child(2) {
+  flex: 1;
+}
+
+.settings-profile strong {
+  display: block;
+
+  color: var(--jkb-text);
+
+  font-size: 11px;
+}
+
+.settings-profile span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 8px;
+}
+
+.settings-profile button {
+  padding:
+    8px
+    11px;
+
+  border:
+    1px
+    solid
+    var(--jkb-border);
+
+  border-radius: 6px;
+
+  background: var(--jkb-card);
+
+  color: var(--jkb-text);
+
+  font-family: inherit;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.settings-profile button:hover {
+  border-color: #dfc64e;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.settings-description {
+  margin:
+    0
+    0
+    18px;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   THEME OPTIONS
+========================================= */
+
+.theme-options {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 15px;
+}
+
+.theme-option {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px;
+
+  border:
+    2px
+    solid
+    var(--jkb-border);
+
+  border-radius: 11px;
+
+  background: var(--jkb-card);
+
+  color: var(--jkb-text);
+
+  text-align: left;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.2s ease,
+    color 0.25s ease;
+}
+
+.theme-option:hover {
+  border-color: #e0c64f;
+}
+
+.theme-option.selected {
+  border-color: #f5c400;
+
+  box-shadow:
+    0
+    0
+    0
+    2px
+    rgba(
+      245,
+      196,
+      0,
+      0.12
+    );
+}
+
+
+/* =========================================
+   THEME PREVIEW
+========================================= */
+
+.theme-preview {
+  width: 75px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 6px;
+}
+
+.light-preview {
+  background: #f5f5f5;
+
+  border:
+    1px
+    solid
+    #dddddd;
+}
+
+.dark-preview {
+  background: #222222;
+
+  border:
+    1px
+    solid
+    #444444;
+}
+
+.preview-top {
+  height: 10px;
+
+  background: #f5c400;
+}
+
+.preview-content {
+  padding: 6px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.preview-content span {
+  display: block;
+
+  height: 4px;
+
+  width: 70%;
+
+  border-radius: 3px;
+
+  background: #cccccc;
+}
+
+.dark-preview .preview-content span {
+  background: #555555;
+}
+
+
+/* =========================================
+   THEME INFORMATION
+========================================= */
+
+.theme-option-info {
+  flex: 1;
+}
+
+.theme-option-info strong {
+  display: block;
+
+  color: var(--jkb-text);
+
+  font-size: 11px;
+}
+
+.theme-option-info small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 8px;
+}
+
+.theme-radio {
+  color: var(--jkb-yellow-dark);
+
+  font-size: 16px;
+}
+
+
+/* =========================================
+   SECURITY
+========================================= */
+
+.security-info {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 12px;
+}
+
+.security-info > div {
+  padding: 14px;
+
+  border:
+    1px
+    solid
+    var(--jkb-border);
+
+  border-radius: 9px;
+
+  background: var(--jkb-soft);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.security-info span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 8px;
+
+  text-transform: uppercase;
+}
+
+.security-info strong {
+  color: var(--jkb-text);
+
+  font-size: 10px;
+}
+
+.security-active {
+  color: #2f7d3b !important;
+}
+
+
+/* =========================================
+   DARK THEME
+========================================= */
+
+html[data-theme="dark"] .admin-settings-page {
+  background: var(--jkb-bg);
+
+  color: var(--jkb-text);
+}
+
+
+/* =========================================
+   DARK - ICON BOXES
+========================================= */
+
+html[data-theme="dark"] .settings-card-icon {
+  background: #3a3417;
+}
+
+
+/* =========================================
+   DARK - VIEW PROFILE BUTTON
+========================================= */
+
+html[data-theme="dark"] .settings-profile button {
+  background: #2a2a2a;
+
+  color: #f1f1f1;
+}
+
+
+/* =========================================
+   DARK - SHADOW
+========================================= */
+
+html[data-theme="dark"] .settings-card {
+  box-shadow:
+    0
+    10px
+    30px
+    rgba(
+      0,
+      0,
+      0,
+      0.3
+    );
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .admin-settings-header {
+    padding:
+      0
+      15px;
+  }
+
+  .admin-settings-main {
+    padding:
+      25px
+      15px;
+  }
+
+  .theme-options {
+    grid-template-columns: 1fr;
+  }
+
+  .security-info {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-profile {
+    flex-wrap: wrap;
+  }
+
+  .settings-profile button {
+    width: 100%;
+  }
+
+}

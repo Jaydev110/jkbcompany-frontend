@@ -1,0 +1,644 @@
+/* =========================================
+   JKB ADMIN TASK MANAGEMENT
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.admin-tasks-page {
+  min-height: 100vh;
+
+  background: #fffdf1;
+
+  color: #252525;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-tasks-header {
+  min-height: 70px;
+
+  padding:
+    0
+    35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #252525;
+
+  color: #ffffff;
+}
+
+.admin-tasks-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.admin-tasks-logo {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 9px;
+
+  background: #f5c400;
+
+  color: #252525;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+.admin-tasks-brand strong {
+  display: block;
+
+  font-size: 13px;
+}
+
+.admin-tasks-brand span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #999;
+
+  font-size: 8px;
+}
+
+
+/* =========================================
+   HEADER BUTTONS
+========================================= */
+
+.admin-tasks-header-actions {
+  display: flex;
+
+  gap: 10px;
+}
+
+.admin-tasks-header-actions button {
+  padding:
+    9px
+    14px;
+
+  border-radius: 7px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.admin-tasks-header-actions button:first-child {
+  border:
+    1px
+    solid
+    #444;
+
+  background: transparent;
+
+  color: #ccc;
+}
+
+.admin-tasks-header-actions button:last-child {
+  border: none;
+
+  background: #f5c400;
+
+  color: #252525;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.admin-tasks-main {
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding:
+    40px
+    30px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.admin-tasks-heading {
+  margin-bottom: 25px;
+}
+
+.admin-tasks-heading span,
+.task-card-heading span,
+.task-list-heading span {
+  color: #b18b00;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.admin-tasks-heading h1 {
+  margin:
+    7px
+    0
+    5px;
+
+  font-size: 30px;
+}
+
+.admin-tasks-heading p {
+  margin: 0;
+
+  color: #888;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   CREATE TASK CARD
+========================================= */
+
+.create-task-card {
+  padding: 28px;
+
+  margin-bottom: 20px;
+
+  border:
+    1px
+    solid
+    #eee7b9;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+}
+
+.task-card-heading {
+  margin-bottom: 22px;
+}
+
+.task-card-heading h2 {
+  margin:
+    6px
+    0
+    5px;
+
+  font-size: 20px;
+}
+
+.task-card-heading p {
+  margin: 0;
+
+  color: #888;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.task-input-group {
+  margin-bottom: 15px;
+}
+
+.task-input-group label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #444;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.task-input-group input,
+.task-input-group textarea,
+.task-input-group select {
+  width: 100%;
+
+  padding:
+    10px
+    12px;
+
+  border:
+    1px
+    solid
+    #ded8b8;
+
+  border-radius: 7px;
+
+  background: #fff;
+
+  color: #333;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  outline: none;
+}
+
+.task-input-group input,
+.task-input-group select {
+  height: 39px;
+}
+
+.task-input-group textarea {
+  resize: vertical;
+
+  min-height: 95px;
+}
+
+.task-input-group input:focus,
+.task-input-group textarea:focus,
+.task-input-group select:focus {
+  border-color: #e4b900;
+
+  box-shadow:
+    0
+    0
+    0
+    2px
+    rgba(
+      245,
+      196,
+      0,
+      0.15
+    );
+}
+
+
+/* =========================================
+   FORM ROW
+========================================= */
+
+.task-form-row {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 15px;
+}
+
+
+/* =========================================
+   CREATE BUTTON
+========================================= */
+
+.create-task-button {
+  width: 100%;
+
+  height: 42px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #f5c400;
+
+  color: #252525;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.create-task-button:hover {
+  background: #e5b800;
+
+  transform:
+    translateY(-1px);
+}
+
+.create-task-button:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================
+   TASK LIST CARD
+========================================= */
+
+.admin-task-list-card {
+  padding: 25px;
+
+  border:
+    1px
+    solid
+    #eee7b9;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+}
+
+.task-list-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.task-list-heading h2 {
+  margin:
+    5px
+    0
+    0;
+
+  font-size: 18px;
+}
+
+.task-refresh-button {
+  padding:
+    8px
+    12px;
+
+  border:
+    1px
+    solid
+    #eee7b9;
+
+  border-radius: 6px;
+
+  background: #fffdf1;
+
+  color: #666;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   TASK LIST
+========================================= */
+
+.admin-task-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.admin-task-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 13px;
+
+  padding: 15px;
+
+  border:
+    1px
+    solid
+    #eee7b9;
+
+  border-radius: 10px;
+
+  background: #fffdf1;
+}
+
+.task-status-icon {
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 9px;
+
+  background: #f5c400;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.admin-task-info {
+  flex: 1;
+}
+
+.admin-task-info h3 {
+  margin: 0 0 6px;
+
+  color: #333;
+
+  font-size: 13px;
+}
+
+.admin-task-info p {
+  margin: 0;
+
+  color: #888;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   TASK META
+========================================= */
+
+.task-meta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-top: 10px;
+}
+
+.task-meta span {
+  color: #8c7200;
+
+  font-size: 8px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   TASK STATUS
+========================================= */
+
+.task-status {
+  padding:
+    5px
+    9px;
+
+  border-radius: 20px;
+
+  background: #fff2a1;
+
+  color: #856900;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.task-status.in-progress {
+  background: #e8eef9;
+
+  color: #466ca3;
+}
+
+.task-status.completed {
+  background: #e4f7e8;
+
+  color: #2f7d3b;
+}
+
+
+/* =========================================
+   EMPTY / MESSAGE
+========================================= */
+
+.task-message {
+  padding: 30px;
+
+  text-align: center;
+
+  color: #888;
+
+  font-size: 10px;
+}
+
+.task-empty {
+  padding: 35px;
+
+  text-align: center;
+
+  border-radius: 10px;
+
+  background: #fffdf1;
+}
+
+.task-empty > div {
+  width: 38px;
+  height: 38px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff2a1;
+
+  color: #9a7900;
+
+  font-weight: 700;
+}
+
+.task-empty h3 {
+  margin:
+    10px
+    0
+    5px;
+
+  font-size: 13px;
+}
+
+.task-empty p {
+  margin: 0;
+
+  color: #999;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .admin-tasks-header {
+    padding:
+      0
+      15px;
+  }
+
+  .admin-tasks-main {
+    padding:
+      25px
+      15px;
+  }
+
+  .task-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-task-item {
+    flex-wrap: wrap;
+  }
+
+  .task-status {
+    margin-left: 48px;
+  }
+
+}

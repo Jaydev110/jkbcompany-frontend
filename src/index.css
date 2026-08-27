@@ -109,3 +109,686 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+
+
+/* =========================================
+   JKB GLOBAL RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+
+  background: var(--jkb-bg, #fffdf1);
+
+  color: var(--jkb-text, #252525);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  overflow-x: hidden;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* =========================================
+   THEME VARIABLES
+========================================= */
+
+:root {
+  --jkb-bg: #fffdf1;
+  --jkb-card: #ffffff;
+  --jkb-text: #252525;
+  --jkb-text-secondary: #888888;
+  --jkb-border: #eee7b9;
+  --jkb-input: #ffffff;
+  --jkb-soft: #fffdf1;
+
+  --jkb-yellow: #f5c400;
+  --jkb-yellow-dark: #b18b00;
+}
+
+
+html[data-theme="dark"],
+body[data-theme="dark"] {
+  --jkb-bg: #181818;
+  --jkb-card: #242424;
+  --jkb-text: #f1f1f1;
+  --jkb-text-secondary: #aaaaaa;
+  --jkb-border: #3b3b3b;
+  --jkb-input: #1f1f1f;
+  --jkb-soft: #1f1f1f;
+}
+
+
+/* =========================================
+   GLOBAL PAGE WIDTH
+========================================= */
+
+.jkb-dashboard,
+.jkb-admin-dashboard,
+.my-tasks-page,
+.my-profile-page,
+.employee-work-status-page,
+.employee-settings-page,
+.manage-employees-page,
+.add-employee-page,
+.edit-employee-page,
+.view-employee-page,
+.admin-profile-page,
+.admin-settings-page,
+.admin-tasks-page,
+.work-status-page {
+
+  width: 100% !important;
+
+  min-width: 0;
+
+  max-width: none !important;
+
+  margin: 0 !important;
+
+  background: var(--jkb-bg);
+
+  color: var(--jkb-text);
+}
+
+
+/* =========================================
+   EMPLOYEE DASHBOARD
+========================================= */
+
+.jkb-dashboard {
+  min-height: 100vh;
+
+  width: 100%;
+
+  display: block;
+}
+
+
+/* =========================================
+   EMPLOYEE SIDEBAR
+========================================= */
+
+.dashboard-sidebar {
+  position: fixed !important;
+
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+
+  width: 292px !important;
+
+  min-width: 292px !important;
+  max-width: 292px !important;
+
+  flex-shrink: 0 !important;
+
+  overflow-x: hidden;
+
+  overflow-y: auto;
+
+  transform: none !important;
+
+  transition: none !important;
+}
+
+
+/* NEVER EXPAND SIDEBAR ON HOVER */
+
+.dashboard-sidebar:hover {
+  width: 292px !important;
+
+  min-width: 292px !important;
+
+  max-width: 292px !important;
+
+  transform: none !important;
+}
+
+
+/* =========================================
+   EMPLOYEE MAIN CONTENT
+========================================= */
+
+.dashboard-main {
+  width: calc(100% - 292px) !important;
+
+  max-width: none !important;
+
+  min-height: 100vh;
+
+  margin-left: 292px !important;
+
+  padding:
+    25px
+    45px !important;
+
+  flex: none !important;
+}
+
+
+/* =========================================
+   EMPLOYEE DASHBOARD CONTENT
+========================================= */
+
+.dashboard-topbar,
+.dashboard-welcome-card,
+.dashboard-stats,
+.dashboard-content-grid,
+.dashboard-tasks-panel,
+.dashboard-task-summary {
+  width: 100% !important;
+
+  max-width: none !important;
+}
+
+
+/* =========================================
+   DASHBOARD STATS
+========================================= */
+
+.dashboard-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 15px;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   DASHBOARD TWO COLUMNS
+========================================= */
+
+.dashboard-content-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 20px;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   ADMIN DASHBOARD
+========================================= */
+
+.jkb-admin-dashboard {
+  min-height: 100vh;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   ADMIN SIDEBAR
+========================================= */
+
+.admin-sidebar {
+  position: fixed !important;
+
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+
+  width: 292px !important;
+
+  min-width: 292px !important;
+  max-width: 292px !important;
+
+  flex-shrink: 0 !important;
+
+  overflow-x: hidden;
+
+  overflow-y: auto;
+
+  transform: none !important;
+
+  transition: none !important;
+}
+
+
+/* NEVER EXPAND ADMIN SIDEBAR */
+
+.admin-sidebar:hover {
+  width: 292px !important;
+
+  min-width: 292px !important;
+
+  max-width: 292px !important;
+
+  transform: none !important;
+}
+
+
+/* =========================================
+   ADMIN MAIN
+========================================= */
+
+.admin-main {
+  width: calc(100% - 292px) !important;
+
+  max-width: none !important;
+
+  min-height: 100vh;
+
+  margin-left: 292px !important;
+
+  padding:
+    25px
+    45px !important;
+
+  flex: none !important;
+}
+
+
+/* =========================================
+   ADMIN DASHBOARD CONTENT
+========================================= */
+
+.admin-topbar,
+.admin-welcome-card,
+.admin-stats,
+.admin-panel,
+.admin-actions {
+  width: 100% !important;
+
+  max-width: none !important;
+}
+
+
+/* =========================================
+   ADMIN STATS
+========================================= */
+
+.admin-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 15px;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   ALL ADMIN / EMPLOYEE MAIN CONTAINERS
+========================================= */
+
+.manage-employees-main,
+.edit-employee-main,
+.view-employee-main,
+.admin-profile-main,
+.admin-settings-main,
+.work-status-main,
+.employee-work-status-main,
+.employee-settings-main,
+.my-profile-main,
+.my-tasks-main,
+.admin-tasks-main {
+
+  width: 100% !important;
+
+  max-width: none !important;
+
+  margin-left: auto;
+
+  margin-right: auto;
+}
+
+
+/* =========================================
+   MANAGE EMPLOYEES
+========================================= */
+
+.manage-employees-main {
+  padding:
+    40px
+    45px !important;
+}
+
+
+/* =========================================
+   WORK STATUS
+========================================= */
+
+.work-status-main {
+  padding:
+    40px
+    45px !important;
+}
+
+
+/* =========================================
+   ADMIN SETTINGS
+========================================= */
+
+.admin-settings-main {
+  padding:
+    40px
+    45px !important;
+}
+
+
+/* =========================================
+   ADMIN PROFILE
+========================================= */
+
+.admin-profile-main {
+  padding:
+    40px
+    45px !important;
+}
+
+
+/* =========================================
+   EDIT EMPLOYEE
+========================================= */
+
+.edit-employee-main {
+  padding:
+    40px
+    45px !important;
+}
+
+
+/* =========================================
+   VIEW EMPLOYEE
+========================================= */
+
+.view-employee-main {
+  padding:
+    40px
+    45px !important;
+}
+
+
+/* =========================================
+   EMPLOYEE PROFILE
+========================================= */
+
+.my-profile-main {
+  padding:
+    40px
+    45px !important;
+}
+
+
+/* =========================================
+   EMPLOYEE TASKS
+========================================= */
+
+.my-tasks-main {
+  padding:
+    40px
+    45px !important;
+}
+
+
+/* =========================================
+   EMPLOYEE WORK STATUS
+========================================= */
+
+.employee-work-status-main {
+  padding:
+    40px
+    45px !important;
+}
+
+
+/* =========================================
+   EMPLOYEE SETTINGS
+========================================= */
+
+.employee-settings-main {
+  padding:
+    40px
+    45px !important;
+}
+
+
+/* =========================================
+   ADMIN TASKS
+========================================= */
+
+.admin-tasks-main {
+  padding:
+    40px
+    45px !important;
+}
+
+
+/* =========================================
+   REMOVE RESTRICTIVE MAX WIDTHS
+========================================= */
+
+.dashboard-main,
+.admin-main,
+.manage-employees-main,
+.work-status-main,
+.admin-settings-main,
+.admin-profile-main,
+.edit-employee-main,
+.view-employee-main,
+.my-profile-main,
+.my-tasks-main,
+.employee-work-status-main,
+.employee-settings-main,
+.admin-tasks-main {
+
+  max-width: none !important;
+}
+
+
+/* =========================================
+   COMMON CARDS
+========================================= */
+
+body[data-theme="dark"] .dashboard-panel,
+body[data-theme="dark"] .admin-panel,
+body[data-theme="dark"] .employee-table-card,
+body[data-theme="dark"] .work-status-card,
+body[data-theme="dark"] .admin-settings-card,
+body[data-theme="dark"] .settings-card,
+body[data-theme="dark"] .employee-settings-card {
+
+  background: var(--jkb-card) !important;
+
+  border-color: var(--jkb-border) !important;
+
+  color: var(--jkb-text) !important;
+}
+
+
+/* =========================================
+   COMMON INPUTS
+========================================= */
+
+body[data-theme="dark"] input,
+body[data-theme="dark"] textarea,
+body[data-theme="dark"] select {
+
+  background:
+    var(--jkb-input) !important;
+
+  color:
+    var(--jkb-text) !important;
+
+  border-color:
+    var(--jkb-border) !important;
+}
+
+
+/* =========================================
+   DARK THEME TEXT
+========================================= */
+
+body[data-theme="dark"] h1,
+body[data-theme="dark"] h2,
+body[data-theme="dark"] h3,
+body[data-theme="dark"] h4,
+body[data-theme="dark"] strong {
+
+  color:
+    var(--jkb-text);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .dashboard-sidebar,
+  .admin-sidebar {
+
+    width: 230px !important;
+
+    min-width: 230px !important;
+
+    max-width: 230px !important;
+  }
+
+  .dashboard-sidebar:hover,
+  .admin-sidebar:hover {
+
+    width: 230px !important;
+
+    min-width: 230px !important;
+
+    max-width: 230px !important;
+  }
+
+  .dashboard-main,
+  .admin-main {
+
+    width: calc(100% - 230px) !important;
+
+    margin-left: 230px !important;
+
+    padding:
+      25px
+      25px !important;
+  }
+
+  .dashboard-stats,
+  .admin-stats {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .dashboard-sidebar,
+  .admin-sidebar {
+
+    position: relative !important;
+
+    width: 100% !important;
+
+    min-width: 100% !important;
+
+    max-width: 100% !important;
+
+    height: auto;
+
+    min-height: auto;
+
+    max-height: none;
+
+  }
+
+  .dashboard-sidebar:hover,
+  .admin-sidebar:hover {
+
+    width: 100% !important;
+
+    min-width: 100% !important;
+
+    max-width: 100% !important;
+
+  }
+
+  .dashboard-main,
+  .admin-main {
+
+    width: 100% !important;
+
+    margin-left: 0 !important;
+
+    padding:
+      20px
+      15px !important;
+  }
+
+  .dashboard-stats,
+  .admin-stats {
+
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-content-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .manage-employees-main,
+  .work-status-main,
+  .admin-settings-main,
+  .admin-profile-main,
+  .edit-employee-main,
+  .view-employee-main,
+  .my-profile-main,
+  .my-tasks-main,
+  .employee-work-status-main,
+  .employee-settings-main,
+  .admin-tasks-main {
+
+    padding:
+      25px
+      15px !important;
+  }
+
+}

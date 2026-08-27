@@ -1,0 +1,756 @@
+* {
+  box-sizing: border-box;
+}
+
+.work-status-page {
+  min-height: 100vh;
+
+  background: var(--jkb-bg);
+
+  color: var(--jkb-text);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.work-status-header {
+  min-height: 70px;
+
+  padding:
+    0
+    35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #252525;
+
+  color: #fff;
+}
+
+.work-status-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.work-status-logo {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #f5c400;
+
+  color: #252525;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+.work-status-brand strong {
+  display: block;
+
+  font-size: 13px;
+}
+
+.work-status-brand span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #999;
+
+  font-size: 8px;
+}
+
+
+/* =========================================
+   HEADER ACTIONS
+========================================= */
+
+.work-status-header-actions {
+  display: flex;
+
+  gap: 10px;
+}
+
+.work-status-header-actions button {
+  padding:
+    9px
+    14px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.work-status-header-actions button:first-child {
+  border:
+    1px
+    solid
+    #444;
+
+  background: transparent;
+
+  color: #ccc;
+}
+
+.work-status-header-actions button:last-child {
+  border: none;
+
+  background: #f5c400;
+
+  color: #252525;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.work-status-main {
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding:
+    40px
+    30px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.work-status-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+}
+
+.work-status-heading span {
+  color: var(--jkb-yellow-dark);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.work-status-heading h1 {
+  margin:
+    7px
+    0
+    5px;
+
+  color: var(--jkb-text);
+
+  font-size: 30px;
+}
+
+.work-status-heading p {
+  margin: 0;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 11px;
+}
+
+.work-status-refresh {
+  padding:
+    9px
+    13px;
+
+  border:
+    1px
+    solid
+    var(--jkb-border);
+
+  border-radius: 7px;
+
+  background: var(--jkb-card);
+
+  color: var(--jkb-text);
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.work-status-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.work-summary-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 16px;
+
+  border:
+    1px
+    solid
+    var(--jkb-border);
+
+  border-radius: 12px;
+
+  background: var(--jkb-card);
+}
+
+.work-summary-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #fff2a1;
+
+  font-size: 13px;
+}
+
+.work-summary-card span {
+  display: block;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 8px;
+}
+
+.work-summary-card strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--jkb-text);
+
+  font-size: 16px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.work-status-card {
+  padding: 25px;
+
+  border:
+    1px
+    solid
+    var(--jkb-border);
+
+  border-radius: 15px;
+
+  background: var(--jkb-card);
+
+  overflow: hidden;
+}
+
+.work-status-card-heading {
+  margin-bottom: 22px;
+}
+
+.work-status-card-heading span {
+  color: var(--jkb-yellow-dark);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.work-status-card-heading h2 {
+  margin:
+    5px
+    0;
+
+  color: var(--jkb-text);
+
+  font-size: 18px;
+}
+
+.work-status-card-heading p {
+  margin: 0;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.work-status-table-wrapper {
+  overflow-x: auto;
+}
+
+.work-status-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 850px;
+}
+
+.work-status-table th {
+  padding:
+    12px
+    10px;
+
+  border-bottom:
+    1px
+    solid
+    var(--jkb-border);
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  text-align: left;
+
+  text-transform: uppercase;
+}
+
+.work-status-table td {
+  padding:
+    14px
+    10px;
+
+  border-bottom:
+    1px
+    solid
+    var(--jkb-border);
+
+  color: var(--jkb-text);
+
+  font-size: 9px;
+
+  vertical-align: middle;
+}
+
+
+/* =========================================
+   EMPLOYEE CELL
+========================================= */
+
+.work-employee-cell {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.work-employee-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  background: #f5c400;
+
+  color: #252525;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+.work-employee-cell strong {
+  display: block;
+
+  color: var(--jkb-text);
+
+  font-size: 9px;
+}
+
+.work-employee-cell small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 7px;
+}
+
+
+/* =========================================
+   ACCOUNT STATUS
+========================================= */
+
+.work-account-status {
+  display: inline-flex;
+
+  padding:
+    5px
+    9px;
+
+  border-radius: 20px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+.work-account-status.active {
+  background: #e4f7e8;
+
+  color: #2f7d3b;
+}
+
+.work-account-status.inactive {
+  background: #f9e1e1;
+
+  color: #a23b3b;
+}
+
+
+/* =========================================
+   CURRENT WORK STATUS
+========================================= */
+
+.current-work-status {
+  display: inline-flex;
+
+  padding:
+    5px
+    9px;
+
+  border-radius: 20px;
+
+  background: #fff2a1;
+
+  color: #856900;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.work-status-select {
+  width: 130px;
+
+  height: 35px;
+
+  padding:
+    0
+    9px;
+
+  border:
+    1px
+    solid
+    var(--jkb-border);
+
+  border-radius: 6px;
+
+  background: var(--jkb-input);
+
+  color: var(--jkb-text);
+
+  font-family: inherit;
+
+  font-size: 8px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.work-status-select:focus {
+  border-color: #e0c64f;
+}
+
+.status-updating {
+  display: inline-block;
+
+  margin-left: 7px;
+
+  color: var(--jkb-yellow-dark);
+
+  font-size: 7px;
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.work-status-message {
+  padding:
+    35px;
+
+  text-align: center;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 10px;
+}
+
+.work-status-empty {
+  padding:
+    40px
+    20px;
+
+  text-align: center;
+
+  border-radius: 10px;
+
+  background: var(--jkb-soft);
+}
+
+.work-status-empty > div {
+  width: 40px;
+  height: 40px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff2a1;
+
+  font-size: 14px;
+}
+
+.work-status-empty h3 {
+  margin:
+    10px
+    0
+    5px;
+
+  color: var(--jkb-text);
+
+  font-size: 13px;
+}
+
+.work-status-empty p {
+  margin:
+    0
+    0
+    15px;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 9px;
+}
+
+.work-status-empty button {
+  padding:
+    9px
+    13px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #f5c400;
+
+  color: #252525;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   INFORMATION
+========================================= */
+
+.work-status-info {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-top: 18px;
+
+  padding: 15px;
+
+  border:
+    1px
+    solid
+    var(--jkb-border);
+
+  border-radius: 10px;
+
+  background: var(--jkb-soft);
+}
+
+.work-info-icon {
+  width: 20px;
+  height: 20px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff2a1;
+
+  color: #856900;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.work-status-info strong {
+  display: block;
+
+  color: var(--jkb-text);
+
+  font-size: 9px;
+}
+
+.work-status-info p {
+  margin:
+    4px
+    0
+    0;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 8px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+  .work-status-header {
+    padding:
+      0
+      15px;
+  }
+
+  .work-status-main {
+    padding:
+      25px
+      15px;
+  }
+
+  .work-status-summary {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .work-status-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .work-status-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .work-status-card {
+    padding:
+      18px
+      12px;
+  }
+
+}

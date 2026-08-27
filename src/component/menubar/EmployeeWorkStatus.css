@@ -1,0 +1,599 @@
+* {
+  box-sizing: border-box;
+}
+
+.employee-work-status-page {
+  min-height: 100vh;
+
+  background: var(--jkb-bg);
+
+  color: var(--jkb-text);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.employee-work-status-header {
+  min-height: 70px;
+
+  padding: 0 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #252525;
+
+  color: #ffffff;
+}
+
+.employee-work-status-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.employee-work-status-logo {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #f5c400;
+
+  color: #252525;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+.employee-work-status-brand strong {
+  display: block;
+
+  font-size: 13px;
+}
+
+.employee-work-status-brand span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #999999;
+
+  font-size: 8px;
+}
+
+
+/* =========================================
+   HEADER ACTIONS
+========================================= */
+
+.employee-work-status-header-actions {
+  display: flex;
+
+  gap: 10px;
+}
+
+.employee-work-status-header-actions button {
+  padding: 9px 14px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.employee-work-status-header-actions button:first-child {
+  border: 1px solid #444444;
+
+  background: transparent;
+
+  color: #cccccc;
+}
+
+.employee-work-status-header-actions button:last-child {
+  border: none;
+
+  background: #f5c400;
+
+  color: #252525;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.employee-work-status-main {
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 40px 25px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.employee-work-status-heading {
+  margin-bottom: 25px;
+}
+
+.employee-work-status-heading > span {
+  color: var(--jkb-yellow-dark);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.employee-work-status-heading h1 {
+  margin: 7px 0 5px;
+
+  color: var(--jkb-text);
+
+  font-size: 30px;
+}
+
+.employee-work-status-heading p {
+  margin: 0;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   CURRENT STATUS CARD
+========================================= */
+
+.employee-current-status-card {
+  padding: 25px;
+
+  border:
+    1px solid
+    var(--jkb-border);
+
+  border-radius: 15px;
+
+  background: var(--jkb-card);
+}
+
+.employee-current-status-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.employee-current-status-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #fff2a1;
+
+  color: #806600;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.employee-current-status-top span {
+  display: block;
+
+  color: var(--jkb-yellow-dark);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.employee-current-status-top h2 {
+  margin:
+    5px
+    0
+    0;
+
+  color: var(--jkb-text);
+
+  font-size: 21px;
+}
+
+.employee-status-badge {
+  margin-left: auto;
+
+  padding:
+    6px
+    10px;
+
+  border-radius: 20px;
+
+  background: #e4f7e8;
+
+  color: #2f7d3b;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+.employee-status-description {
+  margin-top: 20px;
+
+  padding-top: 17px;
+
+  border-top:
+    1px solid
+    var(--jkb-border);
+}
+
+.employee-status-description p {
+  margin: 0;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   INFORMATION
+========================================= */
+
+.employee-work-information-card {
+  margin-top: 18px;
+
+  padding: 25px;
+
+  border:
+    1px solid
+    var(--jkb-border);
+
+  border-radius: 15px;
+
+  background: var(--jkb-card);
+}
+
+.employee-work-card-heading {
+  margin-bottom: 10px;
+}
+
+.employee-work-card-heading span {
+  color: var(--jkb-yellow-dark);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.employee-work-card-heading h2 {
+  margin:
+    5px
+    0
+    0;
+
+  color: var(--jkb-text);
+
+  font-size: 18px;
+}
+
+.employee-work-details {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+}
+
+.employee-work-detail {
+  padding:
+    16px
+    10px;
+
+  border-bottom:
+    1px solid
+    var(--jkb-border);
+}
+
+.employee-work-detail:nth-child(odd) {
+  margin-right: 12px;
+}
+
+.employee-work-detail:nth-child(even) {
+  margin-left: 12px;
+}
+
+.employee-work-detail span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.employee-work-detail strong {
+  color: var(--jkb-text);
+
+  font-size: 11px;
+}
+
+.employee-work-status-value {
+  color: var(--jkb-yellow-dark) !important;
+}
+
+.employee-active-value {
+  color: #2f7d3b !important;
+}
+
+
+/* =========================================
+   NOTICE
+========================================= */
+
+.employee-work-status-notice {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-top: 18px;
+
+  padding: 15px;
+
+  border:
+    1px solid
+    var(--jkb-border);
+
+  border-radius: 10px;
+
+  background: var(--jkb-soft);
+}
+
+.employee-notice-icon {
+  width: 22px;
+  height: 22px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff2a1;
+
+  color: #806600;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.employee-work-status-notice strong {
+  display: block;
+
+  color: var(--jkb-text);
+
+  font-size: 9px;
+}
+
+.employee-work-status-notice p {
+  margin:
+    4px
+    0
+    0;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 8px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   QUICK ACTIONS
+========================================= */
+
+.employee-work-quick-actions {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 12px;
+
+  margin-top: 18px;
+}
+
+.employee-work-quick-actions button {
+  display: grid;
+
+  grid-template-columns:
+    36px
+    1fr
+    15px;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px;
+
+  border:
+    1px solid
+    var(--jkb-border);
+
+  border-radius: 10px;
+
+  background: var(--jkb-card);
+
+  color: var(--jkb-text);
+
+  text-align: left;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.employee-work-quick-actions button:hover {
+  transform:
+    translateY(-2px);
+
+  border-color: #dfc64e;
+}
+
+.employee-work-quick-actions button > span {
+  width: 33px;
+  height: 33px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #f5c400;
+
+  color: #252525;
+
+  font-size: 11px;
+}
+
+.employee-work-quick-actions strong {
+  display: block;
+
+  color: var(--jkb-text);
+
+  font-size: 10px;
+}
+
+.employee-work-quick-actions small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--jkb-text-secondary);
+
+  font-size: 8px;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.employee-work-status-loading {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--jkb-bg);
+
+  color: var(--jkb-text-secondary);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .employee-work-status-header {
+    padding:
+      0
+      15px;
+  }
+
+  .employee-work-status-main {
+    padding:
+      25px
+      15px;
+  }
+
+  .employee-work-details {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-work-detail:nth-child(odd),
+  .employee-work-detail:nth-child(even) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .employee-work-quick-actions {
+    grid-template-columns: 1fr;
+  }
+
+}

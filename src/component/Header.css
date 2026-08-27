@@ -1,13 +1,12 @@
 /* =========================================
-   JKB NAVBAR
+   JKB HEADER / NAVBAR
 ========================================= */
 
 * {
   box-sizing: border-box;
 }
 
-
-.jkb-navbar {
+.jkb-header {
   position: sticky;
 
   top: 0;
@@ -21,7 +20,7 @@
       255,
       253,
       241,
-      0.97
+      0.96
     );
 
   border-bottom:
@@ -29,13 +28,7 @@
     solid
     #eee7b9;
 
-  backdrop-filter:
-    blur(10px);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+  backdrop-filter: blur(10px);
 }
 
 
@@ -43,7 +36,7 @@
    CONTAINER
 ========================================= */
 
-.jkb-navbar-container {
+.jkb-header-container {
   width: 100%;
 
   max-width: 1250px;
@@ -60,6 +53,8 @@
 
   align-items: center;
 
+  justify-content: space-between;
+
   gap: 25px;
 }
 
@@ -68,27 +63,29 @@
    BRAND
 ========================================= */
 
-.jkb-navbar-brand {
+.jkb-brand {
   display: flex;
 
   align-items: center;
 
   gap: 10px;
 
-  flex-shrink: 0;
+  color: #252525;
 
   text-decoration: none;
+
+  flex-shrink: 0;
 }
 
 
-.jkb-navbar-logo {
-  width: 43px;
-  height: 43px;
+.jkb-brand-logo {
+  width: 42px;
+  height: 42px;
 
   display: flex;
 
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   border-radius: 10px;
 
@@ -108,21 +105,21 @@
       140,
       105,
       0,
-      0.15
+      0.14
     );
 }
 
 
-.jkb-navbar-brand-text {
+.jkb-brand-text {
   display: flex;
 
   flex-direction: column;
 
-  gap: 3px;
+  gap: 2px;
 }
 
 
-.jkb-navbar-brand-text strong {
+.jkb-brand-text strong {
   color: #252525;
 
   font-size: 15px;
@@ -131,8 +128,8 @@
 }
 
 
-.jkb-navbar-brand-text span {
-  color: #888888;
+.jkb-brand-text span {
+  color: #888;
 
   font-size: 8px;
 
@@ -144,25 +141,23 @@
    NAVIGATION
 ========================================= */
 
-.jkb-navbar-links {
+.jkb-navigation {
   display: flex;
 
   align-items: center;
 
-  gap: 28px;
+  gap: 30px;
 
   margin-left: auto;
+
+  margin-right: 25px;
 }
 
 
-.jkb-navbar-link {
+.jkb-nav-link {
   position: relative;
 
-  padding:
-    27px
-    0;
-
-  color: #666666;
+  color: #666;
 
   font-size: 12px;
 
@@ -170,47 +165,48 @@
 
   text-decoration: none;
 
+  padding:
+    27px
+    0;
+
   transition:
     color 0.2s ease;
 }
 
 
-.jkb-navbar-link:hover {
-  color: #b28a00;
+.jkb-nav-link:hover {
+  color: #bd9400;
 }
 
 
-.jkb-navbar-link.active {
+.jkb-nav-link.active {
   color: #252525;
-
-  font-weight: 700;
 }
 
 
-.jkb-navbar-link.active::after {
+.jkb-nav-link.active::after {
   content: "";
 
   position: absolute;
 
   left: 0;
-
   right: 0;
 
-  bottom: 17px;
+  bottom: 18px;
 
-  height: 3px;
+  height: 2px;
 
-  border-radius: 20px;
+  border-radius: 10px;
 
   background: #f5c400;
 }
 
 
 /* =========================================
-   ACTIONS
+   HEADER ACTIONS
 ========================================= */
 
-.jkb-navbar-actions {
+.jkb-header-actions {
   display: flex;
 
   align-items: center;
@@ -218,19 +214,15 @@
   gap: 10px;
 
   flex-shrink: 0;
-
-  margin-left: 25px;
 }
 
 
-.jkb-navbar-login {
+.jkb-login-link {
   padding:
     10px
-    14px;
+    15px;
 
-  border-radius: 7px;
-
-  color: #555555;
+  color: #555;
 
   font-size: 11px;
 
@@ -238,19 +230,21 @@
 
   text-decoration: none;
 
+  border-radius: 7px;
+
   transition:
     0.2s ease;
 }
 
 
-.jkb-navbar-login:hover {
+.jkb-login-link:hover {
   color: #a17e00;
 
   background: #fff6c6;
 }
 
 
-.jkb-navbar-register {
+.jkb-register-link {
   padding:
     10px
     17px;
@@ -283,7 +277,7 @@
 }
 
 
-.jkb-navbar-register:hover {
+.jkb-register-link:hover {
   background: #e7b900;
 
   transform:
@@ -297,30 +291,29 @@
 
 @media (max-width: 900px) {
 
-  .jkb-navbar-container {
+  .jkb-header-container {
+    min-height: 68px;
+
     padding:
       0
       20px;
   }
 
 
-  .jkb-navbar-links {
-    gap: 17px;
+  .jkb-navigation {
+    gap: 18px;
+
+    margin-right: 10px;
   }
 
 
-  .jkb-navbar-actions {
-    margin-left: 10px;
-  }
-
-
-  .jkb-navbar-brand-text span {
-    display: none;
-  }
-
-
-  .jkb-navbar-link {
+  .jkb-nav-link {
     font-size: 11px;
+  }
+
+
+  .jkb-brand-text span {
+    display: none;
   }
 
 }
@@ -332,41 +325,34 @@
 
 @media (max-width: 700px) {
 
-  .jkb-navbar-container {
+  .jkb-header-container {
     min-height: 64px;
 
     padding:
       0
       15px;
 
-    justify-content: space-between;
+    gap: 10px;
   }
 
 
-  .jkb-navbar-links {
+  .jkb-navigation {
     display: none;
   }
 
 
-  .jkb-navbar-brand-text {
+  .jkb-brand-text {
     display: none;
   }
 
 
-  .jkb-navbar-logo {
+  .jkb-brand-logo {
     width: 40px;
     height: 40px;
   }
 
 
-  .jkb-navbar-actions {
-    margin-left: auto;
-
-    gap: 5px;
-  }
-
-
-  .jkb-navbar-login {
+  .jkb-login-link {
     padding:
       8px
       10px;
@@ -375,7 +361,7 @@
   }
 
 
-  .jkb-navbar-register {
+  .jkb-register-link {
     padding:
       9px
       12px;

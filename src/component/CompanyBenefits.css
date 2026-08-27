@@ -1,0 +1,352 @@
+/* =========================================
+   JKB EMPLOYEE MANAGEMENT PORTAL
+   HOME FEATURES SECTION
+========================================= */
+
+.services-preview-section {
+  width: 100%;
+
+  padding: 100px 7%;
+
+  background: #fffdf1;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.services-preview-container {
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.services-preview-heading {
+  max-width: 780px;
+
+  margin-bottom: 55px;
+}
+
+
+.services-preview-label {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #b18b00;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+.services-preview-heading h2 {
+  margin: 0;
+
+  color: #252525;
+
+  font-size: 42px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+}
+
+
+.services-preview-heading h2 span {
+  color: #d1a400;
+}
+
+
+.services-preview-heading p {
+  max-width: 720px;
+
+  margin-top: 18px;
+
+  margin-bottom: 0;
+
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   FEATURE GRID
+========================================= */
+
+.services-preview-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =========================================
+   FEATURE CARD
+========================================= */
+
+.services-preview-card {
+  position: relative;
+
+  min-height: 270px;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #eee7b9;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(90, 70, 0, 0.07);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.services-preview-card:hover {
+  transform:
+    translateY(-7px);
+
+  border-color: #e4cb54;
+
+  box-shadow:
+    0 18px 35px
+    rgba(90, 70, 0, 0.13);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.services-preview-number {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 35px;
+
+  border-radius: 10px;
+
+  background: #fff4b8;
+
+  color: #b48b00;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.services-preview-card h3 {
+  margin: 0 0 12px;
+
+  color: #292929;
+
+  font-size: 18px;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.services-preview-card p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.services-preview-arrow {
+  position: absolute;
+
+  right: 25px;
+
+  bottom: 20px;
+
+  color: #d1a400;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.services-preview-card:hover
+.services-preview-arrow {
+  transform:
+    translateX(5px);
+}
+
+
+/* =========================================
+   BUTTON WRAPPER
+========================================= */
+
+.services-preview-button-wrapper {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 42px;
+}
+
+
+/* =========================================
+   EXPLORE BUTTON
+========================================= */
+
+.services-preview-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    13px
+    25px;
+
+  border-radius: 8px;
+
+  background: #252525;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    all 0.25s ease;
+}
+
+
+.services-preview-button:hover {
+  background: #111111;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 16px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+.services-preview-button span {
+  font-size: 15px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.services-preview-button:hover span {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .services-preview-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .services-preview-section {
+    padding:
+      70px 20px;
+  }
+
+
+  .services-preview-heading h2 {
+    font-size: 31px;
+  }
+
+
+  .services-preview-heading p {
+    font-size: 13px;
+  }
+
+
+  .services-preview-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 15px;
+  }
+
+
+  .services-preview-card {
+    min-height: 230px;
+
+    padding: 24px;
+  }
+
+}

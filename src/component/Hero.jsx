@@ -1,39 +1,159 @@
+import { Link } from "react-router-dom";
+import "./Hero.css";
+
 function Hero() {
   return (
-    <div
-      style={{
-        background: "#0b3d91",
-        color: "white",
-        padding: "100px 20px",
-        textAlign: "center",
-      }}
-    >
-      <h1 style={{ fontSize: "55px", color:"white"}}>
-        Welcome to JKB Company
-      </h1>
+    <section className="jkb-hero">
 
-      <h3>
-        Building Modern Digital Solutions
-      </h3>
+      <div className="hero-container">
 
-      <p style={{ maxWidth: "700px", margin: "20px auto" }}>
-        We provide Website Development, Software Development,
-        Mobile Apps and IT Solutions for businesses.
-      </p>
+        {/* ==============================
+            LEFT SIDE
+        ============================== */}
 
-      <button
-        style={{
-          background: "white",
-          color: "#0b3d91",
-          padding: "12px 35px",
-          border: "none",
-          borderRadius: "5px",
-          fontWeight: "bold",
-        }}
-      >
-        Explore Services
-      </button>
-    </div>
+        <div className="hero-content">
+
+          <div className="hero-badge">
+            JKB COMPANY
+          </div>
+
+          <h1>
+            Manage Your
+            <span> Company Smarter</span>
+          </h1>
+
+          <p>
+            A modern employee management platform
+            designed to simplify your company,
+            employees, tasks and daily operations.
+          </p>
+
+          <div className="hero-buttons">
+
+            <Link
+              to="/register"
+              className="hero-primary-btn"
+            >
+              Get Started
+            </Link>
+
+            <Link
+              to="/login"
+              className="hero-secondary-btn"
+            >
+              Login
+            </Link>
+
+          </div>
+
+        </div>
+
+
+        {/* ==============================
+            RIGHT SIDE
+        ============================== */}
+
+        <div className="hero-visual">
+
+          <div className="hero-circle"></div>
+
+          <div className="hero-card main-card">
+
+            <div className="card-header">
+              <span>
+                Employee Dashboard
+              </span>
+
+              <span className="online-dot"></span>
+            </div>
+
+            <div className="employee-info">
+
+              <div className="employee-avatar">
+                J
+              </div>
+
+              <div>
+                <h3>
+                  Welcome to JKB
+                </h3>
+
+                <p>
+                  Employee Management
+                </p>
+              </div>
+
+            </div>
+
+
+            <div className="dashboard-stats">
+
+              <div className="stat-box">
+                <strong>120+</strong>
+                <span>Employees</span>
+              </div>
+
+              <div className="stat-box">
+                <strong>35</strong>
+                <span>Projects</span>
+              </div>
+
+              <div className="stat-box">
+                <strong>98%</strong>
+                <span>Efficiency</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* FLOATING CARD 1 */}
+
+          <div className="floating-card floating-one">
+
+            <div className="floating-icon">
+              ✓
+            </div>
+
+            <div>
+              <strong>
+                Tasks Completed
+              </strong>
+
+              <small>
+                Today
+              </small>
+            </div>
+
+          </div>
+
+
+          {/* FLOATING CARD 2 */}
+
+          <div className="floating-card floating-two">
+
+            <div className="floating-icon">
+              +
+            </div>
+
+            <div>
+              <strong>
+                New Employee
+              </strong>
+
+              <small>
+                Added Successfully
+              </small>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
   );
 }
 

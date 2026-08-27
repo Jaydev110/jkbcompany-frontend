@@ -1,0 +1,249 @@
+/* =========================================
+   JKB - WHY CHOOSE US
+========================================= */
+
+.why-section {
+  width: 100%;
+
+  padding: 100px 7%;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.why-container {
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.why-heading {
+  max-width: 780px;
+
+  margin-bottom: 55px;
+}
+
+
+.why-label {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #b18b00;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+.why-heading h2 {
+  margin: 0;
+
+  color: #252525;
+
+  font-size: 42px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+}
+
+
+.why-heading h2 span {
+  color: #d1a400;
+}
+
+
+.why-heading p {
+  max-width: 700px;
+
+  margin-top: 18px;
+
+  margin-bottom: 0;
+
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.why-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.why-card {
+  position: relative;
+
+  min-height: 245px;
+
+  padding: 28px;
+
+  border:
+    1px solid
+    #eee7b9;
+
+  border-radius: 16px;
+
+  background: #fffdf1;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.why-card:hover {
+  transform:
+    translateY(-7px);
+
+  border-color: #e4cb54;
+
+  box-shadow:
+    0 18px 35px
+    rgba(90, 70, 0, 0.11);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.why-number {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #f5c400;
+
+  color: #252525;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.why-card h3 {
+  margin:
+    28px
+    0
+    12px;
+
+  color: #292929;
+
+  font-size: 17px;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.why-card p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .why-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .why-section {
+    padding:
+      70px
+      20px;
+  }
+
+
+  .why-heading h2 {
+    font-size: 31px;
+  }
+
+
+  .why-heading p {
+    font-size: 13px;
+  }
+
+
+  .why-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 15px;
+  }
+
+
+  .why-card {
+    min-height: 210px;
+
+    padding: 24px;
+  }
+
+}
